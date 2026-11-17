@@ -593,6 +593,19 @@ html.ipad .pop,html.ipad .pop.on{transform:none!important;transition:opacity .45
 html.ipad svg [data-s],html.ipad svg [data-s].on{transform:none!important;transition:opacity .5s ease!important}
 html.ipad svg,html.ipad img{-webkit-touch-callout:none;-webkit-user-select:none;user-select:none}
 html.ipad *{-webkit-tap-highlight-color:transparent}
+/* iPad: logos de diversificación con tamaño fijo (Safari los agrandaba por aspect-ratio+altura:100%) */
+html.ipad .cells.logos i{position:relative;overflow:hidden;contain:layout paint}
+html.ipad .cells.logos i.apple-cell{overflow:visible;contain:none}
+html.ipad .cells.logos i b:not(.lg){position:absolute;aspect-ratio:auto;max-width:none;max-height:none}
+html.ipad #cells3.logos i b:not(.lg){left:50%;top:50%;width:52px;height:52px;margin:-26px 0 0 -26px}
+html.ipad #cells10.logos i b:not(.lg){left:50%;top:50%;width:46px;height:46px;margin:-23px 0 0 -23px}
+html.ipad .cells.g1000.logos{grid-auto-rows:34.8px}
+html.ipad .cells.g1000.logos i{aspect-ratio:auto;height:34.8px;min-height:0}
+html.ipad .cells.g1000.logos i b:not(.lg){left:0;top:0;width:34.8px;height:34.8px;margin:0}
+html.ipad .cells.g1000.logos i b.lg{width:auto;height:auto}
+html.ipad .cells.g1000.logos i.apple-cell b:not(.lg){width:100%;height:100%}
+html.ipad #cells3.logos i.apple-cell b:not(.lg),html.ipad #cells10.logos i.apple-cell b:not(.lg){width:46px;height:46px;margin:-23px 0 0 -23px}
+html.ipad .cells.logos i b{transform:none!important;transition:none!important}
 @media (hover:none){#s11a .br.xl:hover,.btn:hover,.stocklink:hover,.br:hover,#ctl .nav:hover,#fs:hover{transform:none!important;filter:none}}
 
 @media (prefers-reduced-motion:reduce){*{transition-duration:.01s!important;animation-duration:.01s!important}}
